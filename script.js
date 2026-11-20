@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const typingText = document.getElementById("typing-text");
     const words = [
         "UI/UX Designer",
-        "IT Student",
         "Front-End Builder"
     ];
 
