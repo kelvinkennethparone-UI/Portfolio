@@ -6,8 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description" content="The personal digital portfolio of Kelvin Kenneth Parone, an Information Technology student and aspiring UI/UX designer.">
-
     <meta name="author" content="Kelvin Kenneth Parone">
+
+    <!-- OPEN GRAPH / SOCIAL PREVIEW -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kelvin Kenneth Parone | UI/UX &amp; IT Portfolio">
+    <meta property="og:description" content="Information Technology student crafting modern UI/UX layouts, responsive web interfaces, and practical digital systems.">
+    <meta property="og:url" content="https://kelvinkennethparone-ui.github.io/Portfolio/">
+
+    <!-- CUSTOM SVG FAVICON -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23131722'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Outfit,sans-serif' font-size='34' font-weight='800' fill='%238b7cff'%3EK.%3C/text%3E%3C/svg%3E">
 
     <title>Kelvin Kenneth Parone | UI/UX &amp; IT Portfolio</title>
 
@@ -53,7 +61,7 @@
             </a>
 
             <!-- NAVIGATION LINKS -->
-            <nav class="nav-links">
+            <nav class="nav-links" id="nav-links" aria-label="Primary navigation">
 
                 <a href="#home" class="active">Home</a>
 
@@ -67,18 +75,25 @@
 
             </nav>
 
-            <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <i data-lucide="menu"></i>
-            </button>
+            <div class="nav-actions">
+                <button type="button" class="cmd-trigger" id="cmd-open-btn" aria-label="Open quick command menu" title="Quick Jump (Ctrl+K)">
+                    <i data-lucide="search"></i>
+                    <span>Ctrl+K</span>
+                </button>
 
-            <!-- CONTACT BUTTON -->
-            <a href="#contact" class="nav-button">
+                <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i data-lucide="menu"></i>
+                </button>
 
-                Let's Talk
+                <!-- CONTACT BUTTON -->
+                <a href="#contact" class="nav-button">
 
-                <i data-lucide="arrow-up-right"></i>
+                    Let's Talk
 
-            </a>
+                    <i data-lucide="arrow-up-right"></i>
+
+                </a>
+            </div>
 
         </header>
 
@@ -248,21 +263,45 @@
 
                 <div class="about-text">
                     <p>
-                        I'm Kelvin Kenneth Parone, an Information Technology student with a strong interest in UI/UX design and modern web interfaces. I enjoy turning complex ideas and functional workflows into clean, intuitive user experiences.
+                        I'm Kelvin Kenneth Parone, an Information Technology student from Bicol focused on UI/UX design and responsive front-end development. I like turning rough ideas and multi-step workflows into interfaces that feel calm, structured, and easy to use.
                     </p>
                     <p>
-                        Combining a technical IT foundation with visual and layout design helps me bridge the gap between how a product looks and how smoothly it works for real users.
+                        Having an IT background shapes how I design—I think about layout responsiveness, user flow states, and clean implementation from the start rather than treating visuals and code as separate steps.
                     </p>
+
+                    <div class="about-meta">
+                        <span><strong>Focus:</strong> UI/UX &amp; Front-End</span>
+                        <span><strong>Location:</strong> Bicol, Philippines</span>
+                        <span><strong>Status:</strong> Open to Opportunities</span>
+                    </div>
+
+                    <a href="#projects" class="about-inline-link">
+                        See how I apply this in my work
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
                 </div>
 
                 <div class="about-highlights">
                     <div class="about-card">
-                        <h3>UI/UX &amp; Visual Design</h3>
-                        <p>Clean layouts, clear visual hierarchy, responsive components, and user-friendly flows.</p>
+                        <div class="about-card-head">
+                            <i data-lucide="layout"></i>
+                            <h3>UI/UX &amp; Visual Hierarchy</h3>
+                        </div>
+                        <p>Clear spacing, readable typography, intuitive navigation, and purposeful screen structure.</p>
                     </div>
                     <div class="about-card">
-                        <h3>Front-End &amp; Systems</h3>
-                        <p>Building structured web pages and interactive interfaces backed by solid IT fundamentals.</p>
+                        <div class="about-card-head">
+                            <i data-lucide="code-2"></i>
+                            <h3>Front-End &amp; Systems Thinking</h3>
+                        </div>
+                        <p>Responsive HTML, CSS, and JavaScript builds supported by practical IT and workflow fundamentals.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-head">
+                            <i data-lucide="sparkles"></i>
+                            <h3>Detail &amp; Iteration</h3>
+                        </div>
+                        <p>Refining layouts, visual assets, and interactive states until the experience feels cohesive.</p>
                     </div>
                 </div>
 
@@ -285,35 +324,143 @@
             <div class="skills-grid">
 
                 <div class="skill-card">
-                    <h3>UI/UX &amp; Visual Design</h3>
+                    <div class="skill-card-head">
+                        <i data-lucide="pen-tool"></i>
+                        <h3>UI/UX &amp; Visual Design</h3>
+                    </div>
                     <p>Crafting clean interfaces, intuitive user journeys, and balanced visual layouts.</p>
                     <div class="skill-tags">
-                        <span>UI Design</span>
-                        <span>UX Thinking</span>
-                        <span>Wireframing</span>
-                        <span>Visual Hierarchy</span>
+                        <span>
+                            <svg class="tool-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="3" y="3" width="18" height="18" rx="3"/>
+                                <path d="M3 9h18"/>
+                                <path d="M9 21V9"/>
+                            </svg>
+                            UI Design
+                        </span>
+                        <span>
+                            <svg class="tool-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9"/>
+                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                            </svg>
+                            UX Thinking
+                        </span>
+                        <span>
+                            <svg class="tool-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="4" y="4" width="16" height="16" rx="2"/>
+                                <path d="M4 10h16"/>
+                                <path d="M10 4v16"/>
+                            </svg>
+                            Wireframing
+                        </span>
+                        <span>
+                            <svg class="tool-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                                <polyline points="2 17 12 22 22 17"/>
+                                <polyline points="2 12 12 17 22 12"/>
+                            </svg>
+                            Visual Hierarchy
+                        </span>
                     </div>
                 </div>
 
                 <div class="skill-card">
-                    <h3>Front-End &amp; IT</h3>
+                    <div class="skill-card-head">
+                        <i data-lucide="code-2"></i>
+                        <h3>Front-End &amp; IT</h3>
+                    </div>
                     <p>Translating designs into responsive web pages and functional systems.</p>
                     <div class="skill-tags">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>Responsive Design</span>
+                        <span>
+                            <svg class="tool-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="#E34F26" d="M4 2h16l-1.5 17L12 22l-6.5-3L4 2z"/>
+                                <path fill="#EF652A" d="M12 3.5v16.8l5.1-2.2L18.3 3.5H12z"/>
+                                <path fill="#FFFFFF" d="M8.2 7.2h7.6l-.2 2.2H10l.1 2.3h5.3l-.4 4.8L12 17.6l-3-1.1-.2-2.3h2.1l.1 1 1.4.4 1.4-.4.2-2.2H8.4l-.2-4.6z"/>
+                            </svg>
+                            HTML5
+                        </span>
+                        <span>
+                            <svg class="tool-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="#1572B6" d="M4 2h16l-1.5 17L12 22l-6.5-3L4 2z"/>
+                                <path fill="#33A9DC" d="M12 3.5v16.8l5.1-2.2L18.3 3.5H12z"/>
+                                <path fill="#FFFFFF" d="M8.3 7.2h7.4l-.2 2.2h-5.2l.1 2.2h5l-.4 5.1L12 17.7l-3-1-.2-2.3h2.1l.1 1 1.4.4 1.5-.4.2-2.3H8.5l-.2-4.6z"/>
+                            </svg>
+                            CSS3
+                        </span>
+                        <span>
+                            <svg class="tool-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="3" fill="#F7DF1E"/>
+                                <path fill="#111111" d="M10.4 14.9c0 1.4-.8 2.2-2.1 2.2-1 0-1.7-.5-2-1.3l1.3-.8c.2.4.4.7.8.7.4 0 .7-.2.7-.8v-4.2h1.6v4.4zm2.2.8c.3.5.8.8 1.5.8.6 0 1-.3 1-.7 0-.5-.4-.7-1.2-1l-.4-.2c-1.2-.5-2-1.1-2-2.4 0-1.2.9-2.1 2.3-2.1 1 0 1.7.3 2.2 1.2l-1.2.8c-.3-.5-.6-.6-1-.6-.4 0-.7.2-.7.6 0 .4.3.6 1 .9l.4.2c1.4.6 2.2 1.2 2.2 2.5 0 1.4-1.1 2.2-2.6 2.2-1.2 0-2-.5-2.4-1.3l1.1-.7z"/>
+                            </svg>
+                            JavaScript
+                        </span>
+                        <span>
+                            <svg class="tool-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="4" width="14" height="12" rx="2"/>
+                                <rect x="18" y="8" width="4" height="10" rx="1"/>
+                                <path d="M6 20h6"/>
+                            </svg>
+                            Responsive Design
+                        </span>
                     </div>
                 </div>
 
                 <div class="skill-card">
-                    <h3>Design &amp; Dev Tools</h3>
-                    <p>Tools I use for prototyping, graphic edits, and building projects.</p>
+                    <div class="skill-card-head">
+                        <i data-lucide="sliders"></i>
+                        <h3>Design, Photo &amp; Dev Tools</h3>
+                    </div>
+                    <p>Tools I use for UI prototyping, photo editing, color grading, and building projects.</p>
                     <div class="skill-tags">
-                        <span>Figma</span>
-                        <span>Canva</span>
-                        <span>VS Code</span>
-                        <span>Git / GitHub</span>
+                        <span>
+                            <svg class="tool-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="#F24E1E" d="M8.5 3h3.5v6H8.5a3 3 0 0 1 0-6z"/>
+                                <path fill="#FF7262" d="M12 3h3.5a3 3 0 0 1 0 6H12V3z"/>
+                                <path fill="#1ABCFE" d="M15.5 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+                                <path fill="#A259FF" d="M8.5 9H12v6H8.5a3 3 0 0 1 0-6z"/>
+                                <path fill="#0ACF83" d="M8.5 15H12v3a3 3 0 1 1-3.5-3z"/>
+                            </svg>
+                            Figma
+                        </span>
+                        <span>
+                            <svg class="tool-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10" fill="#00C4CC"/>
+                                <path fill="#FFFFFF" d="M15.6 14.3c-.7.9-1.8 1.5-3.1 1.5-2.1 0-3.7-1.6-3.7-3.8 0-2.2 1.6-3.8 3.7-3.8 1.3 0 2.4.5 3.1 1.4l-1.3 1c-.4-.5-1-.8-1.8-.8-1.2 0-2.1.9-2.1 2.2s.9 2.2 2.1 2.2c.8 0 1.4-.3 1.8-.9l1.4 1.1z"/>
+                            </svg>
+                            Canva
+                        </span>
+                        <span>
+                            <svg class="tool-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="4" fill="#001E36"/>
+                                <rect x="2" y="2" width="20" height="20" rx="4" fill="none" stroke="#31A8FF" stroke-width="1.5"/>
+                                <text x="12" y="15.2" text-anchor="middle" font-family="Outfit,sans-serif" font-size="9.5" font-weight="800" fill="#31A8FF">Ps</text>
+                            </svg>
+                            Adobe Photoshop
+                        </span>
+                        <span>
+                            <svg class="tool-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="4" fill="#001E36"/>
+                                <rect x="2" y="2" width="20" height="20" rx="4" fill="none" stroke="#31A8FF" stroke-width="1.5"/>
+                                <text x="12" y="15.2" text-anchor="middle" font-family="Outfit,sans-serif" font-size="9.5" font-weight="800" fill="#31A8FF">Lr</text>
+                            </svg>
+                            Adobe Lightroom
+                        </span>
+                        <span>
+                            <svg class="tool-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="#007ACC" d="M16.5 2.5L7.8 10.4 4.1 7.6 2 8.6v6.8l2.1 1 3.7-2.8 8.7 7.9 5.5-2.6V5.1l-5.5-2.6zm0 14.3L10.3 12l6.2-4.8v9.6z"/>
+                            </svg>
+                            VS Code
+                        </span>
+                        <span>
+                            <svg class="tool-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="20" rx="5" fill="#F05032"/>
+                                <circle cx="12" cy="7.5" r="1.8" fill="#FFFFFF"/>
+                                <circle cx="12" cy="16.5" r="1.8" fill="#FFFFFF"/>
+                                <circle cx="16.5" cy="12" r="1.8" fill="#FFFFFF"/>
+                                <path d="M12 9.3v5.4M12 10.5l3.2 1.5" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+                            </svg>
+                            Git / GitHub
+                        </span>
                     </div>
                 </div>
 
@@ -330,59 +477,78 @@
 
             <div class="section-header">
                 <span class="section-tag">Selected Work</span>
-                <h2>Projects &amp; <span class="gradient-text">UI/UX concepts.</span></h2>
+                <h2>Projects, systems &amp; <span class="gradient-text">UI/UX concepts.</span></h2>
             </div>
 
-            <div class="projects-grid">
+            <!-- FILTER & SEARCH CONTROLS -->
+            <div class="project-controls">
+                <div class="filter-pills" role="tablist" aria-label="Filter projects by category">
+                    <button type="button" class="filter-pill active" data-filter="all">All</button>
+                    <button type="button" class="filter-pill" data-filter="System Design">System Design</button>
+                    <button type="button" class="filter-pill" data-filter="UI/UX & Web">UI/UX &amp; Web</button>
+                </div>
 
-                <article class="project-card">
+                <div class="project-search-box">
+                    <i data-lucide="search"></i>
+                    <input type="search" id="project-search" placeholder="Search projects, systems, or tools..." aria-label="Search projects">
+                </div>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+
+                <article class="project-card" data-project-id="digital-portfolio" data-category="UI/UX & Web" data-tags="Digital Portfolio UI/UX Front-End HTML CSS JavaScript">
                     <div class="project-top">
                         <span class="project-category">UI/UX &amp; Web</span>
-                        <a href="#contact" class="project-link" aria-label="View Project Details">
+                        <button type="button" class="project-link open-case-study" data-project="digital-portfolio" aria-label="Open preview and case study for Digital Portfolio">
                             <i data-lucide="arrow-up-right"></i>
-                        </a>
+                        </button>
                     </div>
-                    <h3>Personal Portfolio Concept</h3>
-                    <p>Dark-mode responsive portfolio focused on clean visual hierarchy, smooth micro-interactions, and clear navigation.</p>
+                    <h3>Digital Portfolio</h3>
+                    <p>Responsive dark-mode portfolio built with structured visual hierarchy, live project filtering, command palette navigation, case study modals, and contact form integration.</p>
                     <div class="project-tags">
-                        <span>UI/UX</span>
+                        <span>UI/UX Design</span>
                         <span>HTML / CSS</span>
                         <span>JavaScript</span>
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" data-project-id="berims-deped-bicol" data-category="System Design" data-tags="BERIMS DepEd Region V Bicol Monitoring System School Resources">
                     <div class="project-top">
-                        <span class="project-category">Interface Design</span>
-                        <a href="#contact" class="project-link" aria-label="View Project Details">
+                        <span class="project-category">System Design</span>
+                        <button type="button" class="project-link open-case-study" data-project="berims-deped-bicol" aria-label="Open preview and case study for DepEd Bicol Resources Management System">
                             <i data-lucide="arrow-up-right"></i>
-                        </a>
+                        </button>
                     </div>
-                    <h3>Web &amp; Mobile UI Layouts</h3>
-                    <p>Structured screen flows, card components, and user-friendly layouts designed around everyday usability.</p>
+                    <h3>DepEd Bicol Resources Management System</h3>
+                    <p>Basic Education Resources and Inputs Monitoring System designed to replace manual spreadsheets with centralized, role-aware tracking across Region V schools, SDOs, and the Regional Office.</p>
                     <div class="project-tags">
-                        <span>Figma</span>
-                        <span>Wireframing</span>
-                        <span>Responsive UI</span>
+                        <span>System Design</span>
+                        <span>Role-Aware UI</span>
+                        <span>DepEd Region V</span>
                     </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card" data-project-id="library-printing-request" data-category="System Design" data-tags="Library Printing Request System Print Queue Request Tracking Desktop">
                     <div class="project-top">
-                        <span class="project-category">IT &amp; Systems</span>
-                        <a href="#contact" class="project-link" aria-label="View Project Details">
+                        <span class="project-category">System Design</span>
+                        <button type="button" class="project-link open-case-study" data-project="library-printing-request" aria-label="Open preview and case study for Library Printing Request System">
                             <i data-lucide="arrow-up-right"></i>
-                        </a>
+                        </button>
                     </div>
-                    <h3>Student &amp; System Projects</h3>
-                    <p>Academic and practical builds combining structured logic, clean forms, and organized information display.</p>
+                    <h3>Library Printing Request System</h3>
+                    <p>Desktop workflow and interface for managing library print requests, document specifications, queue status tracking, and organized fulfillment.</p>
                     <div class="project-tags">
-                        <span>IT Systems</span>
+                        <span>Desktop System</span>
+                        <span>Request Workflow</span>
                         <span>UI Structure</span>
-                        <span>Problem Solving</span>
                     </div>
                 </article>
 
+            </div>
+
+            <div class="empty-projects" id="empty-projects" hidden>
+                <p>No matching projects found for your current filter or search.</p>
+                <button type="button" class="secondary-button" id="reset-project-filters">Reset Filters</button>
             </div>
 
         </section>
@@ -422,12 +588,10 @@
                     </div>
                 </div>
 
-                <form class="contact-form" id="contact-form">
+                <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="a7064982-740d-4484-8306-dd382088b51d">
                     <input type="hidden" name="subject" value="New Portfolio Message from Kelvin Kenneth Parone's Website">
                     <input type="hidden" name="from_name" value="Portfolio Contact Form">
-
-                    <div class="form-group">
 
                     <div class="form-group">
                         <label for="name">Your Name</label>
@@ -463,6 +627,93 @@
         <footer class="site-footer">
             <p>&copy; <span id="year">2026</span> Kelvin Kenneth Parone. All rights reserved.</p>
         </footer>
+
+        <!-- =========================
+             CASE STUDY & SYSTEM PREVIEW MODAL
+        ========================== -->
+
+        <div class="modal-backdrop" id="case-study-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <div class="modal-dialog">
+                <div class="modal-header">
+                    <div>
+                        <span class="project-category" id="modal-category">Category</span>
+                        <h3 id="modal-title">Project Title</h3>
+                    </div>
+                    <div class="modal-header-actions">
+                        <button type="button" class="modal-zoom-btn" id="modal-zoom-btn">Zoom View</button>
+                        <button type="button" class="modal-close" id="modal-close" aria-label="Close case study modal">
+                            <i data-lucide="x"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- DESKTOP SCREENSHOT FRAME -->
+                <div class="modal-preview-stage" id="modal-preview-stage">
+                    <div class="modal-window-frame">
+                        <div class="modal-window-bar">
+                            <span class="window-dots" aria-hidden="true">
+                                <i></i><i></i><i></i>
+                            </span>
+                            <span class="modal-window-path" id="modal-window-path"></span>
+                        </div>
+                        <div class="modal-preview-body">
+                            <img id="modal-preview-img" src="" alt="" draggable="false">
+                            <div class="modal-preview-fallback" id="modal-preview-fallback" hidden>
+                                <strong>Desktop Screenshot Pending</strong>
+                                <span id="modal-fallback-path"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="modal-summary" id="modal-summary"></p>
+
+                <div class="modal-details-grid">
+                    <div class="modal-detail-box">
+                        <h4>Focus &amp; Approach</h4>
+                        <p id="modal-approach"></p>
+                    </div>
+                    <div class="modal-detail-box">
+                        <h4>Key Takeaway</h4>
+                        <p id="modal-outcome"></p>
+                    </div>
+                </div>
+
+                <div class="modal-tags" id="modal-tags"></div>
+
+                <div class="modal-footer">
+                    <div class="modal-nav-group">
+                        <button type="button" class="modal-nav-btn" id="modal-prev" aria-label="Previous project">
+                            <i data-lucide="arrow-left"></i>
+                            Prev
+                        </button>
+                        <button type="button" class="modal-nav-btn" id="modal-next" aria-label="Next project">
+                            Next
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+                    <a href="#contact" class="primary-button modal-cta" id="modal-contact-cta">
+                        Discuss Similar Work
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================
+             COMMAND PALETTE (CTRL+K)
+        ========================== -->
+
+        <div class="cmd-backdrop" id="command-palette" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Quick command menu">
+            <div class="cmd-dialog">
+                <div class="cmd-search-bar">
+                    <i data-lucide="search"></i>
+                    <input type="text" id="cmd-input" placeholder="Jump to section, open project, or run action..." autocomplete="off">
+                    <button type="button" class="cmd-esc" id="cmd-esc-btn">ESC</button>
+                </div>
+                <ul class="cmd-list" id="cmd-list" role="listbox"></ul>
+            </div>
+        </div>
 
         <!-- COPY TOAST NOTIFICATION -->
         <div class="toast-notification" id="toast-notification" role="status" aria-live="polite">
