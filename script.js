@@ -289,7 +289,7 @@ const caseStudies = [
         id: "library-printing-request",
         category: "System Design",
         title: "Library Printing Request System",
-        previewImage: "Library Printing Request System",
+        previewImage: "./assets/systems/library-printing-request-system.png",
         previewAlt: "Desktop preview of Library Printing Request System",
         summary: "A structured system and desktop interface for managing library printing requests, job specifications, queue status, and fulfillment.",
         approach: "Organized print request submission, status tracking, and queue visibility so users and staff have clear progress at every step.",
